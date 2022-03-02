@@ -1,1 +1,1 @@
-from shared import afunction
+from shared.shared import afunction
