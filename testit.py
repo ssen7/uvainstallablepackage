@@ -1,10 +1,13 @@
 import shared as sh
-
 sh.afunction()
 
-sh.clean_string("this is it")
+def test_multi_spaces():
+    assert sh.space_compress('word       word     word') == 'word word word', "Failed multi space"
 
-try:
-    sh.clean_string(2)
-except Exception as e:
-    print(e)
+def test_multi_lines():
+    multiline = """
+    word
+    word
+    word
+    """
+    assert sh.space_compress(multiline) == 'word word word', "Failed multi line"
