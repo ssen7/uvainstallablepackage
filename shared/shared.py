@@ -23,3 +23,13 @@ def space_compress(stocomp):
 
 def new_func():
     pass
+
+def space_compress_new(instr):
+    if type(instr)!=str:
+        print("Expected str but got {} instead".format(type(instr)))
+        return None
+    else:
+        comp = re.sub(r'\s+', ' ', instr)
+        return comp.strip()
+
+    
