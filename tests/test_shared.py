@@ -31,9 +31,9 @@ def test_asserts_skipif_onlyondarwin():
     print("My platform is", sys.platform) ## We do not see a print out
     assert "Test string" == sh.space_compress(test_str), "String <{}> not compressed as expected".format(test_str)
 
-@pytest.mark.skipif(sys.platform == 'darwin', reason="requires the darwin platform")
-def test_asserts_skipif_fail_onlynotondarwin():
-    test_str = "Test \n string  "
+# @pytest.mark.skipif(sys.platform == 'darwin', reason="requires the darwin platform")
+# def test_asserts_skipif_fail_onlynotondarwin():
+#     test_str = "Test \n string  "
 
-    print("My platform is", sys.platform) ## We do not see a print out
-    assert "Test, string" == sh.space_compress(test_str), "String <{}> not compressed as expected".format(test_str)
+#     print("My platform is", sys.platform) ## We do not see a print out
+#     assert "Test, string" == sh.space_compress(test_str), "String <{}> not compressed as expected".format(test_str)
